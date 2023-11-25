@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@main
         name: Checkout Repository
 
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
           role-session-name: GitHub-Action-Role
@@ -52,7 +52,7 @@ jobs:
       contents: read
     steps:
     - uses: actions/checkout@main
-    - uses: aws-actions/configure-aws-credentials@v1
+    - uses: aws-actions/configure-aws-credentials@v4
       with:
         role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
         role-session-name: GitHub-Action-Role
